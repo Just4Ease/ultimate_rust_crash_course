@@ -47,8 +47,8 @@ fn main() {
 
 
 ```rust
-const STARTING_MISSILES: i32 = 8;
-const READY_AMOUNT: i32 = 2;
+const STARTING_MISSILES: _i32 = 8;
+const READY_AMOUNT: _i32 = 2;
 
 fn main() {
     let mut missiles = STARTING_MISSILES;
@@ -61,15 +61,15 @@ fn main() {
 
 ### Extra challenges
 
-- Explicitly annotate the variables with the type `i32`
+- Explicitly annotate the variables with the type `_i32`
 
 ```rust
-const STARTING_MISSILES: i32 = 8;
-const READY_AMOUNT: i32 = 2;
+const STARTING_MISSILES: _i32 = 8;
+const READY_AMOUNT: _i32 = 2;
 
 fn main() {
-    let mut missiles: i32 = STARTING_MISSILES;
-    let ready: i32 = READY_AMOUNT;
+    let mut missiles: _i32 = STARTING_MISSILES;
+    let ready: _i32 = READY_AMOUNT;
     println!("Firing {} of my {} missiles...", ready, missiles);
     missiles = missiles - ready;
     println!("{} missiles left", missiles);
@@ -79,8 +79,8 @@ fn main() {
 - Try binding the variables all at once on one line using a pattern (parenthesis and commas) -- can you figure out where "mut" goes?
 
 ```rust
-const STARTING_MISSILES: i32 = 8;
-const READY_AMOUNT: i32 = 2;
+const STARTING_MISSILES: _i32 = 8;
+const READY_AMOUNT: _i32 = 2;
 
 fn main() {
     let (mut missiles, ready) = (STARTING_MISSILES, READY_AMOUNT);
@@ -95,11 +95,11 @@ fn main() {
   Hint: it will use the same sort of pattern as the variables and values.
 
 ```rust
-const STARTING_MISSILES: i32 = 8;
-const READY_AMOUNT: i32 = 2;
+const STARTING_MISSILES: _i32 = 8;
+const READY_AMOUNT: _i32 = 2;
 
 fn main() {
-    let (mut missiles, ready): (i32, i32) = (STARTING_MISSILES, READY_AMOUNT);
+    let (mut missiles, ready): (_i32, _i32) = (STARTING_MISSILES, READY_AMOUNT);
     println!("Firing {} of my {} missiles...", ready, missiles);
     missiles = missiles - ready;
     println!("{} missiles left", missiles);
